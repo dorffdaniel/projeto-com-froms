@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"
+        defer></script>
+        <script src="js/jquery.js"></script>
 </head>
+
 <body>
-    
-  <div class="container col-11 col-md-9" id="form-container">
+
+    <div class="container col-11 col-md-9" id="form-container">
         <div class="row gx-5">
             <div class="col-md-6">
                 <h2>Realize o seu cadastro</h2>
@@ -20,30 +26,34 @@
                         <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome">
                         <label for="name" class="form-label">Digite seu nome</label>
                     </div>
-                    <div class="form-floating mb-3">                        
-                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Digite seu sobrenome">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="lastname" name="lastname"
+                            placeholder="Digite seu sobrenome">
                         <label for="lastname" class="form-label">Digite seu sobrenome</label>
                     </div>
-                    <div class="form-floating mb-3">                        
+                    <div class="form-floating mb-3">
                         <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu email">
                         <label for="email" class="form-label">Digite seu email</label>
                     </div>
-                    <div class="form-floating mb-3">                        
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha">
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="password" name="password"
+                            placeholder="Digite sua senha">
                         <label for="password" class="form-label">Digite sua senha</label>
                     </div>
-                    <div class="form-floating mb-3">                        
-                        <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirme sua senha">
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="confirmpassword" name="confirmpassword"
+                            placeholder="Confirme sua senha">
                         <label for="confirmpassword" class="form-label">Confirme sua senha</label>
                     </div>
                     <div class="mb-3">
                         <div class="form-check mb-2">
                             <input class="form-check-input" type="checkbox" value="" id="agree-term">
                             <label class="form-check-label" for="agree-term">
-                              Você aceita os <a href="#">termos de serviço</a>?
+                                Você aceita os <a href="#" onclick="mostrarModal()">termos de serviço</a>?
+                        
                             </label>
                         </div>
-                            <div class="form-check">
+                        <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="newsletter" checked>
                             <label class="form-check-label" for="newsletter">
                                 Deseja receber as nossas Newsletters?
@@ -66,5 +76,30 @@
         </div>
     </div>
 
+    <div class="modal" tabindex="-1" id="modalTermos">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Termos e condiçoes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis perspiciatis ullam dicta laudantium aspernatur voluptates, totam quasi? Nemo perferendis, cumque iste deleniti maiores praesentium, exercitationem inventore, unde alias molestiae enim!
+                    Voluptate a ab neque ratione veniam dolores minus non aperiam tempora dolorem, voluptates culpa reiciendis laboriosam laudantium pariatur maiores ipsum aliquam debitis nam, exercitationem magni saepe iusto corrupti. Eum, optio?
+                    Et obcaecati doloribus delectus reprehenderit esse ad iusto necessitatibus ratione officiis iure voluptatem, repellendus deserunt, iste rem vero eum accusamus minima minus, nesciunt illo. Architecto qui sunt vel ad voluptatibus?
+                    Odit iusto ea repellat repudiandae atque impedit at voluptates officiis dolorum vel. Hic, ullam minima sunt quis mollitia cumque cum quae quidem provident tempora sequi ad reprehenderit, temporibus repudiandae blanditiis.
+                    Veniam impedit quod, officia amet alias accusantium saepe quidem eligendi quasi consequatur. Consectetur culpa eos unde doloremque enim laudantium porro nobis odio tempora. Quidem veritatis numquam quisquam excepturi incidunt tenetur!</p>
+                </div>
+               <!--  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>
