@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+
+.cabecalho span {
+    color: #af0d15;
+}
+
+.cabecalho button {
+    padding: .5rem;
+    width: 5rem;
+    background: #e93b3b;
+    border: none;
+    border-radius: .5rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    background: #ccc;
+    height: 90vh;
+}
+
+#listaTarefas {
+    width: 80rem;
+    height: 10rem;
+    background: #fff;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
