@@ -78,8 +78,6 @@ function entrar() {
 }
 
 
-
-
 function EncaminharUsuario(nome) {
     localStorage.setItem("nome", nome);
     window.location.href = "./areaUser.html";
