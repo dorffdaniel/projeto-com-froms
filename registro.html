@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"
         defer></script>
-        <script src="js/jquery.js"></script>
+    <script src="js/jquery.js"></script>
 </head>
 
 <body>
@@ -36,21 +36,16 @@
                         <label for="email" class="form-label">Digite seu email</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="password" name="password"
+                        <input type="passCad" class="form-control" id="passCad" name="password"
                             placeholder="Digite sua senha">
                         <label for="password" class="form-label">Digite sua senha</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="confirmpassword" name="confirmpassword"
-                            placeholder="Confirme sua senha">
-                        <label for="confirmpassword" class="form-label">Confirme sua senha</label>
                     </div>
                     <div class="mb-3">
                         <div class="form-check mb-2">
                             <input class="form-check-input" type="checkbox" value="" id="agree-term">
                             <label class="form-check-label" for="agree-term">
                                 Você aceita os <a href="#" onclick="mostrarModal()">termos de serviço</a>?
-                        
+
                             </label>
                         </div>
                         <div class="form-check">
@@ -60,7 +55,7 @@
                             </label>
                         </div>
                     </div>
-                    <input type="submit" class="btn btn-primary" value="Cadastrar">
+                    <input type="button" class="btn btn-primary" value="Cadastrar" onclick="cadastrarNovaConta()">
                 </form>
             </div>
             <div class="col-md-6">
@@ -85,11 +80,21 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis perspiciatis ullam dicta laudantium aspernatur voluptates, totam quasi? Nemo perferendis, cumque iste deleniti maiores praesentium, exercitationem inventore, unde alias molestiae enim!
-                    Voluptate a ab neque ratione veniam dolores minus non aperiam tempora dolorem, voluptates culpa reiciendis laboriosam laudantium pariatur maiores ipsum aliquam debitis nam, exercitationem magni saepe iusto corrupti. Eum, optio?
-                    Et obcaecati doloribus delectus reprehenderit esse ad iusto necessitatibus ratione officiis iure voluptatem, repellendus deserunt, iste rem vero eum accusamus minima minus, nesciunt illo. Architecto qui sunt vel ad voluptatibus?
-                    Odit iusto ea repellat repudiandae atque impedit at voluptates officiis dolorum vel. Hic, ullam minima sunt quis mollitia cumque cum quae quidem provident tempora sequi ad reprehenderit, temporibus repudiandae blanditiis.
-                    Veniam impedit quod, officia amet alias accusantium saepe quidem eligendi quasi consequatur. Consectetur culpa eos unde doloremque enim laudantium porro nobis odio tempora. Quidem veritatis numquam quisquam excepturi incidunt tenetur!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis perspiciatis ullam dicta
+                        laudantium aspernatur voluptates, totam quasi? Nemo perferendis, cumque iste deleniti maiores
+                        praesentium, exercitationem inventore, unde alias molestiae enim!
+                        Voluptate a ab neque ratione veniam dolores minus non aperiam tempora dolorem, voluptates culpa
+                        reiciendis laboriosam laudantium pariatur maiores ipsum aliquam debitis nam, exercitationem
+                        magni saepe iusto corrupti. Eum, optio?
+                        Et obcaecati doloribus delectus reprehenderit esse ad iusto necessitatibus ratione officiis iure
+                        voluptatem, repellendus deserunt, iste rem vero eum accusamus minima minus, nesciunt illo.
+                        Architecto qui sunt vel ad voluptatibus?
+                        Odit iusto ea repellat repudiandae atque impedit at voluptates officiis dolorum vel. Hic, ullam
+                        minima sunt quis mollitia cumque cum quae quidem provident tempora sequi ad reprehenderit,
+                        temporibus repudiandae blanditiis.
+                        Veniam impedit quod, officia amet alias accusantium saepe quidem eligendi quasi consequatur.
+                        Consectetur culpa eos unde doloremque enim laudantium porro nobis odio tempora. Quidem veritatis
+                        numquam quisquam excepturi incidunt tenetur!</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" onclick="confirmarTermos()">Confirmar</button>
@@ -97,8 +102,11 @@
             </div>
         </div>
     </div>
-
+    <script src="js/jquery.js"></script>
+    <script src="js/sweetalert.js"></script>
+    <script src="js/alerta.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/cadastro.js"></script>
 
 </body>
 
