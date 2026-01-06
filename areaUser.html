@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrapIcons.css">
     <link rel="stylesheet" href="css/areaUser.css">
 </head>
 
@@ -17,7 +19,26 @@
 
         <section id="listaTarefas">
             <h3>Digite sua atividade</h3>
-            <input type="text" id="tarefa" placeholder="digite sua tarefa">
+
+            <div class="d-flex gap-2">
+                <input type="text" id="tarefa" class="form-control" placeholder="Digite sua tarefa"
+                    aria-label="Digite sua tarefa">
+
+                <button class="btn btn-primary" onclick="adicionar()">adicionar</button>
+            </div>
+            <div id="contTarefas" class="esconder">
+
+                <div class="d-flex mt-5 flex-column">
+                    <h2 class="text-center">Tarefas</h2>
+
+                    <div class="res"></div>
+
+
+                </div>
+
+            </div>
+
+
         </section>
 
     </main>
