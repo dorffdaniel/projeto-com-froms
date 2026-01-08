@@ -69,6 +69,17 @@ function listarTarefas() {
 
 }
 
+function apagarTarefa(index) {
+
+    tarefas.splice(index, 1);
+    listarTarefas();
+    alerta("Apagado", "Apagado com sucesso", "success");
+    verificarTarefasExistentes();
+}
+
+
+
+
 $(document).ready(function () {
     verificarTarefasExistentes();
     listarTarefas();
