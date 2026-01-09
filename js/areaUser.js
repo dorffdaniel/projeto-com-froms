@@ -29,8 +29,10 @@ function verificarTarefasExistentes() {
 
 function adicionar() {
     let valor = $("#tarefa").val();
+    let inicio = $("#inicio").val();
+    let fim = $("#fim").val();
 
-    if (!valor.trim()) {
+    if (!valor.trim() || !inicio.trim()) {
         alerta("Erro", "Campo em falta", "error");
         return;
     }
@@ -46,9 +48,15 @@ function adicionar() {
         })
     }
 
+    let obj = {
+        value: valor,
+        comeco: inicio,
+        final: fim
+    }
+
     if (status == 0) {
-        tarefas.push(valor);
-        $("#tarefa").val("");
+        tarefas.push(obj);
+        $("#tarefa, #inicio, #fim").val("");
         listarTarefas();
         verificarTarefasExistentes();
     }
@@ -57,15 +65,18 @@ function adicionar() {
 
 function listarTarefas() {
 
-    let msg = '<ul>'
+    let msg = ''
     tarefas.forEach((el, index) => {
-        msg += `<li class="estli"> ${el} <button class="btn btn-danger" onclick="apagarTarefa(${index})">apagar</button> </li>`
+        msg += `<tr>`
+        msg += `<td class='text-center'> ${el.value} </td>`
+        msg += `<td class='text-center'> ${el.comeco} </td>`
+        msg += `<td class='text-center'> ${el.final} </td>`
+        msg += `<td> <button class="btn btn-danger" onclick="apagarTarefa(${index})">apagar</button> </td>`
+        msg += `</tr>`
 
     })
 
-    msg += '</ul>'
-
-    $(".res").html(msg);
+    $("#res").html(msg);
 
 }
 

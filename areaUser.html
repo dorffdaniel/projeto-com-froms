@@ -20,18 +20,36 @@
         <section id="listaTarefas">
             <h3>Digite sua atividade</h3>
 
-            <div class="d-flex gap-2">
+            <div class="d-flex gap-2 flex-column">
+                <label for="tarefa">Tarefa:<span class="obrigatorio">*</span></label>
                 <input type="text" id="tarefa" class="form-control" placeholder="Digite sua tarefa"
                     aria-label="Digite sua tarefa">
 
+                <label for="inicio">Inicio: <span class="obrigatorio">*</span> </label>
+                <input type="time" class="form-control" name="" id="inicio">
+
+                <label for="fim">Fim: </label>
+                <input type="time" class="form-control" name="" id="fim">
+
                 <button class="btn btn-primary" onclick="adicionar()">adicionar</button>
+
             </div>
-            <div id="contTarefas" class="esconder">
+            <div id="contTarefas" class="esconders">
 
                 <div class="d-flex mt-5 flex-column">
                     <h2 class="text-center">Tarefas</h2>
 
-                    <div class="res"></div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="text-center">Tarefa</th>
+                                <th class="text-center">Inicio</th>
+                                <th class="text-center">Fim</th>
+                            </tr>
+                        </thead>
+                        <tbody id="res"></tbody>
+                    </table>
+                    <!-- <div class="res"></div> -->
 
 
                 </div>
