@@ -1,3 +1,4 @@
+
 const tarefas = [];
 
 function buscarNomeUser() {
@@ -48,14 +49,9 @@ function adicionar() {
         })
     }
 
-    let obj = {
-        value: valor,
-        comeco: inicio,
-        final: fim
-    }
 
     if (status == 0) {
-        tarefas.push(obj);
+        tarefas.push(new Tarefa(valor, inicio, fim));
         $("#tarefa, #inicio, #fim").val("");
         listarTarefas();
         verificarTarefasExistentes();
@@ -68,9 +64,9 @@ function listarTarefas() {
     let msg = ''
     tarefas.forEach((el, index) => {
         msg += `<tr>`
-        msg += `<td class='text-center'> ${el.value} </td>`
-        msg += `<td class='text-center'> ${el.comeco} </td>`
-        msg += `<td class='text-center'> ${el.final} </td>`
+        msg += `<td class='text-center'> ${el.nome} </td>`
+        msg += `<td class='text-center'> ${el.inicio} </td>`
+        msg += `<td class='text-center'> ${el.fim} </td>`
         msg += `<td> <button class="btn btn-danger" onclick="apagarTarefa(${index})">apagar</button> </td>`
         msg += `</tr>`
 
